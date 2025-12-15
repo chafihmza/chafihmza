@@ -108,8 +108,6 @@ I work at the intersection of **technology, automation, and decision support**, 
 - **LXC_Tools** — Custom LXC containers, system hardening, and administration practices.  
 - **Governance & Performance Dashboards** — Power BI dashboards supporting management and committees.  
 
-> 💡 Tip: Pin your best repos on your GitHub profile (Customize profile → “Pinned”).
-
 ---
 
 ## 🌐 Contact & Presence
