@@ -1,0 +1,29 @@
+body {
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar {
+  background: linear-gradient(180deg, #0b3d2e, #0f5a43);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.badge-role {
+  background-color: #d0a94a;
+}

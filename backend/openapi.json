@@ -1,0 +1,86 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Cloud FTP API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/auth/login": {
+      "post": {
+        "summary": "Login",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                },
+                "required": ["email", "password"]
+              }
+            }
+          }
+        },
+        "responses": { "200": { "description": "OK" } }
+      }
+    },
+    "/api/auth/refresh": {
+      "post": { "summary": "Refresh", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/auth/logout": {
+      "post": { "summary": "Logout", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/me": {
+      "get": { "summary": "Current user", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/users": {
+      "post": { "summary": "Create user", "responses": { "201": { "description": "Created" } } },
+      "get": { "summary": "List users", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/users/{id}": {
+      "patch": { "summary": "Update user", "responses": { "200": { "description": "OK" } } },
+      "delete": { "summary": "Delete user", "responses": { "204": { "description": "No content" } } }
+    },
+    "/api/connectors": {
+      "post": { "summary": "Create connector", "responses": { "201": { "description": "Created" } } },
+      "get": { "summary": "List connectors", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/connectors/{id}": {
+      "get": { "summary": "Get connector", "responses": { "200": { "description": "OK" } } },
+      "patch": { "summary": "Update connector", "responses": { "200": { "description": "OK" } } },
+      "delete": { "summary": "Delete connector", "responses": { "204": { "description": "No content" } } }
+    },
+    "/api/connectors/{id}/test": {
+      "post": { "summary": "Test connector", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/files/list": {
+      "get": { "summary": "List files", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/files/mkdir": {
+      "post": { "summary": "Create folder", "responses": { "201": { "description": "Created" } } }
+    },
+    "/api/files/upload": {
+      "post": { "summary": "Upload file", "responses": { "201": { "description": "Created" } } }
+    },
+    "/api/files/download": {
+      "get": { "summary": "Download file", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/files/rename": {
+      "post": { "summary": "Rename file", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/files/delete": {
+      "post": { "summary": "Delete file", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/files/move": {
+      "post": { "summary": "Move file", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/files/search": {
+      "get": { "summary": "Search files", "responses": { "200": { "description": "OK" } } }
+    },
+    "/api/audit": {
+      "get": { "summary": "Audit logs", "responses": { "200": { "description": "OK" } } }
+    }
+  }
+}
